@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: indomaret-master-data-management
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/idm-master-data-management
+    username: eclisse
+    password: Password1!
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 9400
+  servlet:
+    context-path: /master-data-management
+  baseurl: http://localhost:9400
+  successResponse: NO
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
